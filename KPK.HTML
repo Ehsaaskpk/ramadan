@@ -8,28 +8,7 @@
  
 </head>
 <body>
-    <div class="container">
-        <h1>KPK</h1>
-        <input type="text" id="cnic" placeholder="اپنا CNIC درج کریں">
-        <button onclick="showMessage()">جمع کروائیں</button>
-        <div class="message" id="message">
-            <p>براہ کرم معذرت، نظام کی دیکھ بھال کی جا رہی ہے۔</p>
-            <p>براہ کرم نیچے دیے گئے سبز بٹن پر کلک کریں۔</p>
-            <img src="https://via.placeholder.com/100" alt="Maintenance Image">
-        </div>
-        <button class="green-button" id="greenButton" onclick="alert('شکریہ!')">سبز بٹن</button>
-    </div>
-
-    <script>
-        function showMessage() {
-            const cnic = document.getElementById('cnic').value;
-            if (cnic) {
-                document.getElementById('message').style.display = 'block';
-                document.getElementById('greenButton').style.display = 'block';
-            } else {
-                alert('براہ کرم اپنا CNIC درج کریں۔');
-            }
-        }
-    </script>
+     <script src="index.js"></script>
+      
 </body>
 </html>
