@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPK</title>
+    <style>
+        body {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            display: none;
+        }
+        .message img {
+            width: 100px;
+            margin-top: 10px;
+        }
+        .green-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            display: none;
+        }
+        .green-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KPK</h1>
+        <input type="text" id="cnic" placeholder="اپنا CNIC درج کریں">
+        <button onclick="showMessage()">جمع کروائیں</button>
+        <div class="message" id="message">
+            <p>براہ کرم معذرت، نظام کی دیکھ بھال کی جا رہی ہے۔</p>
+            <p>براہ کرم نیچے دیے گئے سبز بٹن پر کلک کریں۔</p>
+            <img src="https://via.placeholder.com/100" alt="Maintenance Image">
+        </div>
+        <button class="green-button" id="greenButton" onclick="alert('شکریہ!')">سبز بٹن</button>
+    </div>
+
+    <script>
+        function showMessage() {
+            const cnic = document.getElementById('cnic').value;
+            if (cnic) {
+                document.getElementById('message').style.display = 'block';
+                document.getElementById('greenButton').style.display = 'block';
+            } else {
+                alert('براہ کرم اپنا CNIC درج کریں۔');
+            }
+        }
+    </script>
+</body>
+</html>
